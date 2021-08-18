@@ -28,19 +28,38 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+  let name = variables.name;
+  if (variables.name == null) name = "Your name";
+  let lastname = variables.lastname;
+  if (variables.lastname == null) lastname = "Your lastname";
+  let role = variables.role;
+  if (variables.role == null) role = "Web Developer";
+  let city = variables.city;
+  if (variables.city == null) city = "Miami";
+  let country = variables.country;
+  if (variables.country == null) country = "USA";
+  let twitter = variables.twitter;
+  if (variables.twitter == null) twitter = "https://www.twitter.com";
+  let github = `https://github.com/${variables.github}`;
+  if (variables.github == null) github = "https://github.com";
+  let linkedin = variables.linkedin;
+  if (variables.linkedin == null) linkedin = "https://www.linkedin.com";
+  let instagram = variables.instagram;
+  if (variables.instagram == null) instagram = "https://www.instagram.com";
+  let position = variables.socialMediaPosition;
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
+          <h1>${name} ${lastname}</h1>
+          <h2>${role}</h2>
+          <h3>${city}, ${country}</h3>
+          <ul class="${position}">
+            <li><a href="${twitter}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="${github}"><i class="fa fa-github"></i></a></li>
+            <li><a href="${linkedin}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="${instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
