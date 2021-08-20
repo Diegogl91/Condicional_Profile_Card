@@ -39,13 +39,13 @@ function render(variables = {}) {
   let country = variables.country;
   if (variables.country == null) country = "USA";
   let twitter = variables.twitter;
-  if (variables.twitter == null) twitter = "https://www.twitter.com";
+  if (variables.twitter == null) twitter = "";
   let github = `https://github.com/${variables.github}`;
-  if (variables.github == null) github = "https://github.com";
+  if (variables.github == null) github = "";
   let linkedin = variables.linkedin;
-  if (variables.linkedin == null) linkedin = "https://www.linkedin.com";
+  if (variables.linkedin == null) linkedin = "";
   let instagram = variables.instagram;
-  if (variables.instagram == null) instagram = "https://www.instagram.com";
+  if (variables.instagram == null) instagram = "";
   let position = variables.socialMediaPosition;
 
   // reset the website body with the new html output
@@ -56,10 +56,10 @@ function render(variables = {}) {
           <h2>${role}</h2>
           <h3>${city}, ${country}</h3>
           <ul class="${position}">
-            <li><a href="${twitter}"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="${github}"><i class="fa fa-github"></i></a></li>
-            <li><a href="${linkedin}"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="${instagram}"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com/${twitter}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github}"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/${linkedin}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/${instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
