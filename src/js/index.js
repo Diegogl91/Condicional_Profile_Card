@@ -40,7 +40,7 @@ function render(variables = {}) {
   if (variables.country == null) country = "USA";
   let twitter = variables.twitter;
   if (variables.twitter == null) twitter = "";
-  let github = `https://github.com/${variables.github}`;
+  let github = `${variables.github}`;
   if (variables.github == null) github = "";
   let linkedin = variables.linkedin;
   if (variables.linkedin == null) linkedin = "";
@@ -58,7 +58,7 @@ function render(variables = {}) {
           <ul class="${position}">
             <li><a href="https://www.twitter.com/${twitter}"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://github.com/${github}"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/${linkedin}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/${linkedin}"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="https://www.instagram.com/${instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
